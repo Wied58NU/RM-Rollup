@@ -15,5 +15,5 @@ sheet = wb['Summary']
 A2=sheet['A2']
 A1=sheet['A1']
 
-print(A2.value)
+print(A2.value, end=",")
 print(A1.value)
