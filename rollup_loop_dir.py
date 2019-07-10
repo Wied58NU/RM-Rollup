@@ -28,6 +28,13 @@ for filename in os.listdir(scratch_dir):
      A2=sheet['A2']
      A1=sheet['A1']
      
+     Total_Time_Away = sheet['C16']
+     Total_General_Admin = sheet['C22']
+     Total_Managerial_Admin Time = sheet['C25']
+     Total_Support = sheet['C33']
+     Total_Consulting = sheet['C37']
+     Hours_per_year_available_for_projects = sheet['C44'] 
+
      print(A2.value, end=",")
      csvfile.write(A2.value + ",")
 
