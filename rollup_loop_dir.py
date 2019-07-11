@@ -82,7 +82,7 @@ for filename in os.listdir(scratch_dir):
      print(Annual_ISO_Project_Hours.value, end=",")
      csvfile.write(str(Annual_ISO_Project_Hours.value) + ",")
 
-     print(Annual_Schools_or_Depts_Project_Hours.value, end=",")
+     print(Annual_Schools_or_Depts_Project_Hours.value)
      csvfile.write(str(Annual_Schools_or_Depts_Project_Hours.value) + ",")
 
 
