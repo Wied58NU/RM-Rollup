@@ -55,7 +55,7 @@ for filename in os.listdir(scratch_dir):
      csvfile.write(str(Total_Time_Away.value) + ",")
 
      print(Total_General_Admin.value, end=",")
-     csvfile.write(str(Total_General_Admin) + ",")
+     csvfile.write(str(Total_General_Admin.value) + ",")
 
      print(Total_Managerial_Admin_Time.value, end=",")
      csvfile.write(str(Total_Managerial_Admin_Time.value) + ",")
@@ -83,7 +83,7 @@ for filename in os.listdir(scratch_dir):
      csvfile.write(str(Annual_ISO_Project_Hours.value) + ",")
 
      print(Annual_Schools_or_Depts_Project_Hours.value)
-     csvfile.write(str(Annual_Schools_or_Depts_Project_Hours.value) + ",")
+     csvfile.write(str(Annual_Schools_or_Depts_Project_Hours.value))
 
 
 
