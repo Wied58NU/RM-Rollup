@@ -8,7 +8,7 @@ from openpyxl import load_workbook
 
 import os
 
-scratch_dir = "/Users/jeffreywiedemann/Desktop/Resource_Planning/"
+scratch_dir = "/Users/jeffreywiedemann/Downloads/DBA/"
 csvfile = open("/Users/jeffreywiedemann/Desktop/Resource_Planning/rollup.csv","w+")
 
 for filename in os.listdir(scratch_dir):
