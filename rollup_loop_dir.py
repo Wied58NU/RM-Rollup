@@ -38,7 +38,7 @@ for filename in os.listdir(scratch_dir):
      Total_Managerial_Admin_Time = sheet['C25']
      Total_Support = sheet['C33']
      Total_Consulting = sheet['C37']
-     Total_Other = sheet['C44'] 
+     Total_Other = sheet['C41'] 
 
      Annual_CI_Project_Hours = sheet['C50']
      Annual_AS_Project_Hours = sheet['C51']
