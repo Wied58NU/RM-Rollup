@@ -41,8 +41,8 @@ for filename in os.listdir(scratch_dir):
      
      sheet = wb['Summary']
      
-     A2=sheet['A2']
-     A1=sheet['A1']
+     Name = sheet['A2']
+     Dept = sheet['A1']
      
      Total_Time_Away = sheet['C16']
      Total_General_Admin = sheet['C22']
@@ -60,12 +60,12 @@ for filename in os.listdir(scratch_dir):
 
 
 
-     print(A2.value, end=",")
-     csvfile.write(A2.value + ",")
+     print(Name.value, end=",")
+     csvfile.write(Name.value + ",")
 
 
-     print(A1.value, end=",")
-     csvfile.write(A1.value + ",")
+     print(Dept.value, end=",")
+     csvfile.write(Dept.value + ",")
 
      print(Total_Time_Away.value, end=",")
      csvfile.write(str(Total_Time_Away.value) + ",")
