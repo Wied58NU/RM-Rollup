@@ -1,0 +1,50 @@
+import xlrd
+
+//Open work book
+workbook = xlrd.open_workbook('my_file_name.xls')
+
+//Open work book
+workbook = xlrd.open_workbook('/Users/jeffreywiedemann/Desktop/Resource_Planningjeff_for_python.xlsx')
+
+
+
+
+//For non ascii characters
+//workbook = xlrd.open_workbook('my_file_name.xls', encoding='cp1252')
+
+//
+worksheet = workbook.sheet_by_name('My_Sheet_Name')
+
+worksheet = workbook.sheet_by_name('Summary')
+
+
+
+# Value of 1st row and 1st column
+worksheet.cell(0, 0).value
+
+
+
+Resource Planning Template 
+
+https://northwestern.box.com/s/g24rfwh6f9jzz5j7r1ziem5faxwksqbq
+
+/anaconda3/bin/python
+# import load_workbook
+from openpyxl import load_workbook
+# set file path
+filepath="/Users/jeffreywiedemann/Desktop/Resource_Planningjeff_for_python.xlsx"
+# load demo.xlsx 
+wb=load_workbook(filepath)
+# select demo.xlsx
+sheet=wb.Summary
+# get b1 cell value
+A2=sheet['A2']
+B2=sheet['B2']
+
+
+# get b3 cell value
+# b3=sheet.cell(row=3,column=2)
+# print b1, b2 and b3
+print(b1.value)
+print(b2.value)
+#print(b3.value)

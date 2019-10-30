@@ -1,4 +1,5 @@
 #!/anaconda3/bin/python
+import string
 
 # https://automatetheboringstuff.com/chapter12/
 
@@ -8,17 +9,17 @@ from openpyxl import load_workbook
 
 import os
 
-teams = ['DAPS', 'DBA' , 'INF', 'RCI' ]
+teams = ['DAPS', 'DBA' , 'INF', 'RCI', 'COLLAB' ]
 
 team  = input("What team do ya want to rollup? ")
 
-if team not in teams:
+if team.upper() not in teams:
    print ("Not a Valid Team!")
    print (teams)
    quit()
 
 
-scratch_dir = "/Users/jeffreywiedemann/Downloads/" + team.upper() + "/"
+scratch_dir = "/Users/jeffreywiedemann/Desktop/Resource_Planning/Team_Reports/" + team.upper() + "/"
 #csvfile = open("/Users/jeffreywiedemann/Desktop/Resource_Planning/daps_rollup.csv","w+")
 csvfile = open("/Users/jeffreywiedemann/Desktop/Resource_Planning/" + team.lower() + "_rollup.csv","w+")
 
