@@ -21,7 +21,7 @@ if team.upper() not in teams:
 
 scratch_dir = "/Users/jeffreywiedemann/Desktop/Resource_Planning/Team_Reports/" + team.upper() + "/"
 #csvfile = open("/Users/jeffreywiedemann/Desktop/Resource_Planning/daps_rollup.csv","w+")
-csvfile = open("/Users/jeffreywiedemann/Desktop/Resource_Planning/" + team.lower() + "_rollup.csv","w+")
+csvfile = open("/Users/jeffreywiedemann/Desktop/Resource_Planning/Team_Reports/" + team.lower() + "_rollup.csv","w+")
 
 
 print("name,dept,Total_Time_Away,Total_General_Admin,Total_Managerial_Admin_Time,Total_Support,Total_Consulting,Total_Other,Annual_CI_Project_Hours,Annual_AS_Project_Hours,Annual_IT_SS_Project_Hours,Annual_ISO_Project_Hours,Annual_Schools_or_Depts_Project_Hours")
