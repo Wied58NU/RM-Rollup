@@ -104,7 +104,7 @@ for filename in os.listdir(scratch_dir):
 
 
 
-
+# Keep these commnets beccause they illustrate working with diiferent worksheets within a workbook
 #     sheet = wb['Meetings & Admin']
 #
 #     M_B10=sheet['B10']
@@ -113,3 +113,6 @@ for filename in os.listdir(scratch_dir):
 #     csvfile.write(str(M_B10.value) + ",")
 
      csvfile.write("\n")
+
+
+# end of for filename in os.listdir(scratch_dir):
