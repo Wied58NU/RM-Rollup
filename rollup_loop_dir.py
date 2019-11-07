@@ -205,7 +205,9 @@ csvfile.write(str(Sum_Annual_ISO_Project_Hours) + ",")
 
 csvfile.write(str(Sum_Annual_Schools_or_Depts_Project_Hours) + ",")
 
-csvfile.write(str(Sum_TOTAL_Project_Hours))
+csvfile.write(str(Sum_TOTAL_Project_Hours) + ",")
+
+csvfile.write(str(Sum_TOTAL_Hours))
 
 csvfile.write("\n")
 
