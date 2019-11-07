@@ -9,7 +9,7 @@ from openpyxl import load_workbook
 
 import os
 
-teams = ['DAPS', 'DBA' , 'INF', 'RCI', 'COLLAB' ]
+teams = ['DAPS', 'DBA' , 'INF', 'RCI', 'COLLAB', 'MMS', 'TNS-V', 'TNS-NE', 'TNS-FS' ]
 
 team  = input("What team do ya want to rollup? ")
 
@@ -18,6 +18,9 @@ if team.upper() not in teams:
    print (teams)
    quit()
 
+print()
+print("If there are errors, most likey there are xlxs files besides the RM Workbooks")
+print()
 
 scratch_dir = "/Users/jeffreywiedemann/Desktop/Resource_Planning/Team_Reports/" + team.upper() + "/"
 #csvfile = open("/Users/jeffreywiedemann/Desktop/Resource_Planning/daps_rollup.csv","w+")
@@ -64,7 +67,7 @@ for filename in os.listdir(scratch_dir):
      Total_Time_Away = sheet['C16']
      Total_General_Admin = sheet['C22']
      Total_Managerial_Admin_Time = sheet['C25']
-     TOTAL_Admin_Time = sheet['C22'].value + sheet['C25'].value
+     TOTAL_Admin_Time = sheet['C16'] + sheet['C22'].value + sheet['C25'].value
      Total_Support = sheet['C33']
      Total_Consulting = sheet['C37']
      Total_Other = sheet['C41'] 
@@ -182,6 +185,39 @@ csvfile.write(str(Sum_Annual_ISO_Project_Hours) + ",")
 csvfile.write(str(Sum_Annual_Schools_or_Depts_Project_Hours) + ",")
 
 csvfile.write(str(Sum_TOTAL_Project_Hours))
+
+csvfile.write("\n")
+
+The_Sums = Sum_TOTAL_Admin_Time +  Sum_Total_Support +  Sum_Total_Consulting +  Sum_Total_Other + Sum_TOTAL_Project_Hours
+
+Percentage_Total_Time_Away = Sum_Total_Time_Away / The_Sums
+Percentage_Total_General_Admin = Sum_Total_General_Admin / The_Sums
+Percentage_Total_Managerial_Admin_Time = Sum_Total_Managerial_Admin_Time / The_Sums
+Percentage_TOTAL_Admin_Time = Sum_TOTAL_Admin_Time / The_Sums
+Percentage_Total_Support = Sum_Total_Support / The_Sums
+Percentage_Total_Consulting = Sum_Total_Consulting / The_Sums
+Percentage_Total_Other = Sum_Total_Other / The_Sums
+Percentage_Annual_CI_Project_Hours = Sum_Annual_CI_Project_Hours / The_Sums
+Percentage_Annual_AS_Project_Hours = Sum_Annual_AS_Project_Hours / The_Sums
+Percentage_Annual_IT_SS_Project_Hours = Sum_Annual_IT_SS_Project_Hours / The_Sums
+Percentage_Annual_ISO_Project_Hours = Sum_Annual_ISO_Project_Hours / The_Sums
+Percentage_Annual_Schools_or_Depts_Project_Hours = Sum_Annual_Schools_or_Depts_Project_Hours / The_Sums
+Percentage_TOTAL_Project_Hours = Sum_TOTAL_Project_Hours / The_Sums
+
+csvfile.write("PERCENTAGE,,")
+csvfile.write(str(round(Percentage_Total_Time_Away, 2)) + ",")
+csvfile.write(str(round(Percentage_Total_General_Admin, 2)) + ",")
+csvfile.write(str(round(Percentage_Total_Managerial_Admin_Time, 2)) + ",")
+csvfile.write(str(round(Percentage_TOTAL_Admin_Time, 2)) + ",")
+csvfile.write(str(round(Percentage_Total_Support, 2)) + ",")
+csvfile.write(str(round(Percentage_Total_Consulting, 2)) + ",")
+csvfile.write(str(round(Percentage_Total_Other, 2)) + ",")
+csvfile.write(str(round(Percentage_Annual_CI_Project_Hours, 2)) + ",")
+csvfile.write(str(round(Percentage_Annual_AS_Project_Hours, 2)) + ",")
+csvfile.write(str(round(Percentage_Annual_IT_SS_Project_Hours, 2)) + ",")
+csvfile.write(str(round(Percentage_Annual_ISO_Project_Hours, 2)) + ",")
+csvfile.write(str(round(Percentage_Annual_Schools_or_Depts_Project_Hours, 2)) + ",")
+csvfile.write(str(round(Percentage_TOTAL_Project_Hours, 2)))
 
 print()
 print(People)
