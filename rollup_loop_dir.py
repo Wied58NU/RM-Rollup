@@ -68,7 +68,7 @@ for filename in os.listdir(scratch_dir):
      Total_Time_Away = sheet['C16']
      Total_General_Admin = sheet['C22']
      Total_Managerial_Admin_Time = sheet['C25']
-     TOTAL_Admin_Time = sheet['C16'] + sheet['C22'].value + sheet['C25'].value
+     TOTAL_Admin_Time = sheet['C16'].value + sheet['C22'].value + sheet['C25'].value
      Total_Support = sheet['C33']
      Total_Consulting = sheet['C37']
      Total_Other = sheet['C41'] 
@@ -80,17 +80,17 @@ for filename in os.listdir(scratch_dir):
      Annual_Schools_or_Depts_Project_Hours = sheet['C54']
      TOTAL_Project_Hours = sheet['C44']
 
-     TOTAL_Hours = sheet['C16'] +/+/
-     sheet['C22']+/+/
-     sheet['C25']+/
-     sheet['C33']+/
-     sheet['C37']+/
-     sheet['C41']+/
-     sheet['C50']+/
-     sheet['C51']+/
-     sheet['C52']+/
-     sheet['C53']+/
-     sheet['C54']
+     TOTAL_Hours = sheet['C16'].value +\
+     sheet['C22'].value +\
+     sheet['C25'].value +\
+     sheet['C33'].value +\
+     sheet['C37'].value +\
+     sheet['C41'].value +\
+     sheet['C50'].value +\
+     sheet['C51'].value +\
+     sheet['C52'].value +\
+     sheet['C53'].value +\
+     sheet['C54'].value
 
 
 
@@ -157,8 +157,8 @@ for filename in os.listdir(scratch_dir):
      print(TOTAL_Project_Hours.value, end=',')
      csvfile.write(str(TOTAL_Project_Hours.value) + ",")
 
-     print(TOTAL_Hours.value)
-     csvfile.write(str(TOTAL_Hours.value))
+     print(TOTAL_Hours)
+     csvfile.write(str(TOTAL_Hours))
 
 
 
