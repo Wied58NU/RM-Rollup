@@ -45,6 +45,7 @@ Sum_Annual_IT_SS_Project_Hours = 0
 Sum_Annual_ISO_Project_Hours = 0
 Sum_Annual_Schools_or_Depts_Project_Hours = 0
 Sum_TOTAL_Project_Hours = 0
+Sum_TOTAL_Hours = 0
 
 
 for filename in os.listdir(scratch_dir):
@@ -79,6 +80,19 @@ for filename in os.listdir(scratch_dir):
      Annual_Schools_or_Depts_Project_Hours = sheet['C54']
      TOTAL_Project_Hours = sheet['C44']
 
+     TOTAL_Hours = sheet['C16'] +/+/
+     sheet['C22']+/+/
+     sheet['C25']+/
+     sheet['C33']+/
+     sheet['C37']+/
+     sheet['C41']+/
+     sheet['C50']+/
+     sheet['C51']+/
+     sheet['C52']+/
+     sheet['C53']+/
+     sheet['C54']
+
+
 
      Sum_Total_Time_Away = Sum_Total_Time_Away + Total_Time_Away.value
      Sum_Total_General_Admin = Sum_Total_General_Admin + Total_General_Admin.value
@@ -93,6 +107,8 @@ for filename in os.listdir(scratch_dir):
      Sum_Annual_ISO_Project_Hours = Sum_Annual_ISO_Project_Hours + Annual_ISO_Project_Hours.value
      Sum_Annual_Schools_or_Depts_Project_Hours = Sum_Annual_Schools_or_Depts_Project_Hours + Annual_Schools_or_Depts_Project_Hours.value
      Sum_TOTAL_Project_Hours = Sum_TOTAL_Project_Hours + TOTAL_Project_Hours.value
+     Sum_TOTAL_Hours = Sum_TOTAL_Hours + TOTAL_Hours
+   
 
      People = People + 1
 
@@ -138,8 +154,13 @@ for filename in os.listdir(scratch_dir):
      print(Annual_Schools_or_Depts_Project_Hours.value, end=',')
      csvfile.write(str(Annual_Schools_or_Depts_Project_Hours.value) + ",")
 
-     print(TOTAL_Project_Hours.value)
-     csvfile.write(str(TOTAL_Project_Hours.value))
+     print(TOTAL_Project_Hours.value, end=',')
+     csvfile.write(str(TOTAL_Project_Hours.value) + ",")
+
+     print(TOTAL_Hours.value)
+     csvfile.write(str(TOTAL_Hours.value))
+
+
 
 
 
