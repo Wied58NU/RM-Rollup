@@ -27,9 +27,9 @@ scratch_dir = "/Users/jeffreywiedemann/Desktop/Resource_Planning/Team_Reports/" 
 csvfile = open("/Users/jeffreywiedemann/Desktop/Resource_Planning/Team_Reports/" + team.upper() + "/" + team.lower() + "_rollup.csv","w+")
 
 
-print("name,dept,Total_Time_Away,Total_General_Admin,Total_Managerial_Admin_Time,TOTAL_Admin_Time,Total_Support,Total_Consulting,Total_Other,Annual_CI_Project_Hours,Annual_AS_Project_Hours,Annual_IT_SS_Project_Hours,Annual_ISO_Project_Hours,Annual_Schools_or_Depts_Project_Hours,TOTAL_Project_Hours")
+print("Name,Department,Total Time Away,Total General Admin,Total Managerial Admin Time,TOTAL Admin Time,Total Support,Total Consulting,Total Other,Annual CI Project Hours,Annual AS Project Hours,Annual IT SS Project Hours,Annual ISO Project Hours,Annual Schools or Depts Project Hours,TOTAL Project Hours")
 
-csvfile.write("name,dept,Total_Time_Away,Total_General_Admin,Total_Managerial_Admin_Time,TOTAL_Admin_Time,Total_Support,Total_Consulting,Total_Other,Annual_CI_Project_Hours,Annual_AS_Project_Hours,Annual_IT_SS_Project_Hours,Annual_ISO_Project_Hours,Annual_Schools_or_Depts_Project_Hours,TOTAL_Project_Hours\n")
+csvfile.write("Name,Department,Total Time Away,Total General Admin,Total Managerial Admin Time,TOTAL Admin Time,Total Support,Total Consulting,Total Other,Annual CI Project Hours,Annual AS Project Hours,Annual IT SS Project Hours,Annual ISO Project Hours,Annual Schools or Depts Project Hours,TOTAL Project Hours\n")
 
 People = 0
 Sum_Total_Time_Away = 0
@@ -213,33 +213,33 @@ csvfile.write("\n")
 
 The_Sums = Sum_TOTAL_Admin_Time +  Sum_Total_Support +  Sum_Total_Consulting +  Sum_Total_Other + Sum_TOTAL_Project_Hours
 
-Percentage_Total_Time_Away = Sum_Total_Time_Away / The_Sums
-Percentage_Total_General_Admin = Sum_Total_General_Admin / The_Sums
-Percentage_Total_Managerial_Admin_Time = Sum_Total_Managerial_Admin_Time / The_Sums
-Percentage_TOTAL_Admin_Time = Sum_TOTAL_Admin_Time / The_Sums
-Percentage_Total_Support = Sum_Total_Support / The_Sums
-Percentage_Total_Consulting = Sum_Total_Consulting / The_Sums
-Percentage_Total_Other = Sum_Total_Other / The_Sums
-Percentage_Annual_CI_Project_Hours = Sum_Annual_CI_Project_Hours / The_Sums
-Percentage_Annual_AS_Project_Hours = Sum_Annual_AS_Project_Hours / The_Sums
-Percentage_Annual_IT_SS_Project_Hours = Sum_Annual_IT_SS_Project_Hours / The_Sums
-Percentage_Annual_ISO_Project_Hours = Sum_Annual_ISO_Project_Hours / The_Sums
-Percentage_Annual_Schools_or_Depts_Project_Hours = Sum_Annual_Schools_or_Depts_Project_Hours / The_Sums
-Percentage_TOTAL_Project_Hours = Sum_TOTAL_Project_Hours / The_Sums
+Percentage_Total_Time_Away = Sum_Total_Time_Away / Sum_TOTAL_Hours * 100
+Percentage_Total_General_Admin = Sum_Total_General_Admin / Sum_TOTAL_Hours * 100
+Percentage_Total_Managerial_Admin_Time = Sum_Total_Managerial_Admin_Time / Sum_TOTAL_Hours * 100
+Percentage_TOTAL_Admin_Time = Sum_TOTAL_Admin_Time / Sum_TOTAL_Hours * 100
+Percentage_Total_Support = Sum_Total_Support / Sum_TOTAL_Hours * 100
+Percentage_Total_Consulting = Sum_Total_Consulting / Sum_TOTAL_Hours * 100
+Percentage_Total_Other = Sum_Total_Other / Sum_TOTAL_Hours * 100
+Percentage_Annual_CI_Project_Hours = Sum_Annual_CI_Project_Hours / Sum_TOTAL_Hours * 100
+Percentage_Annual_AS_Project_Hours = Sum_Annual_AS_Project_Hours / Sum_TOTAL_Hours * 100
+Percentage_Annual_IT_SS_Project_Hours = Sum_Annual_IT_SS_Project_Hours / Sum_TOTAL_Hours * 100
+Percentage_Annual_ISO_Project_Hours = Sum_Annual_ISO_Project_Hours / Sum_TOTAL_Hours * 100
+Percentage_Annual_Schools_or_Depts_Project_Hours = Sum_Annual_Schools_or_Depts_Project_Hours / Sum_TOTAL_Hours * 100
+Percentage_TOTAL_Project_Hours = Sum_TOTAL_Project_Hours / Sum_TOTAL_Hours * 100
 
 csvfile.write("PERCENTAGE,,")
-csvfile.write(str(round(Percentage_Total_Time_Away, 2)) + ",")
-csvfile.write(str(round(Percentage_Total_General_Admin, 2)) + ",")
-csvfile.write(str(round(Percentage_Total_Managerial_Admin_Time, 2)) + ",")
-csvfile.write(str(round(Percentage_TOTAL_Admin_Time, 2)) + ",")
-csvfile.write(str(round(Percentage_Total_Support, 2)) + ",")
-csvfile.write(str(round(Percentage_Total_Consulting, 2)) + ",")
-csvfile.write(str(round(Percentage_Total_Other, 2)) + ",")
-csvfile.write(str(round(Percentage_Annual_CI_Project_Hours, 2)) + ",")
-csvfile.write(str(round(Percentage_Annual_AS_Project_Hours, 2)) + ",")
-csvfile.write(str(round(Percentage_Annual_IT_SS_Project_Hours, 2)) + ",")
-csvfile.write(str(round(Percentage_Annual_ISO_Project_Hours, 2)) + ",")
-csvfile.write(str(round(Percentage_Annual_Schools_or_Depts_Project_Hours, 2)) + ",")
+csvfile.write(str(round(Percentage_Total_Time_Away, 2)) + "%,")
+csvfile.write(str(round(Percentage_Total_General_Admin, 2)) + "%,")
+csvfile.write(str(round(Percentage_Total_Managerial_Admin_Time, 2)) + "%,")
+csvfile.write(str(round(Percentage_TOTAL_Admin_Time, 2)) + "%,")
+csvfile.write(str(round(Percentage_Total_Support, 2)) + "%,")
+csvfile.write(str(round(Percentage_Total_Consulting, 2)) + "%,")
+csvfile.write(str(round(Percentage_Total_Other, 2)) + "%,")
+csvfile.write(str(round(Percentage_Annual_CI_Project_Hours, 2)) + "%,")
+csvfile.write(str(round(Percentage_Annual_AS_Project_Hours, 2)) + "%,")
+csvfile.write(str(round(Percentage_Annual_IT_SS_Project_Hours, 2)) + "%,")
+csvfile.write(str(round(Percentage_Annual_ISO_Project_Hours, 2)) + "%,")
+csvfile.write(str(round(Percentage_Annual_Schools_or_Depts_Project_Hours, 2)) + "%,")
 csvfile.write(str(round(Percentage_TOTAL_Project_Hours, 2)))
 
 print()
