@@ -1,5 +1,6 @@
 #!/anaconda3/bin/python
 import string
+import matplotlib.pyplot as plt
 
 # https://automatetheboringstuff.com/chapter12/
 
@@ -9,10 +10,9 @@ from openpyxl import load_workbook
 
 import os
 
-teams = ['DAPS', 'DBA' , 'INF', 'RCI', 'COLLAB', 'MMS', 'TNS-V', 'TNS-NE', 'TNS-FS' ]
+teams = ['DAPS', 'DBA' , 'INF', 'RCI', 'COLLAB', 'MMS', 'TNS-V', 'TNS-NE', 'TNS-FS','TEST' ]
 
 team  = input("What team do ya want to rollup? ")
-
 if team.upper() not in teams:
    print ("Not a Valid Team!")
    print (teams)
@@ -247,7 +247,17 @@ print(People)
 print()
 print("If there are errors, most likey there are xlxs files besides the RM Workbooks")
 print()
-print("Do yourself a favor and only copy the output csv file back to Box")
+print("Do yourself a favor and only copy the output csv  and chat png files back to Box")
 print()
 
+pie_data = [Percentage_TOTAL_Admin_Time, Percentage_Total_Support, Percentage_Total_Consulting, Percentage_TOTAL_Project_Hours]
+print (pie_data)
+pie_labels = ['Admin_Time', 'Support', 'Consulting', 'Project']
+print (pie_labels)
+
+fig1, ax1 = plt.subplots()
+ax1.pie(pie_data, labels=pie_labels, autopct='%1.1f%%', startangle=0)
+ax1.set_title(team, fontsize=20)
+ax1.axis('equal') 
+ax1.get_figure().savefig("/Users/jeffreywiedemann/Desktop/Resource_Planning/Team_Reports/" + team.upper() + "/" + team.lower() + "_pie_chart.png")
 
